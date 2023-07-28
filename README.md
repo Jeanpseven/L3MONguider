@@ -3,7 +3,22 @@ ele vai te guiar fazendo os comandos enormes e chatos para iniciar o L3MON e ger
 ![lemonlogo](L3MON.png)
 
 original repo:https://github.com/efxtv/L3MON
-
+---
+## L3MON Features
+- GPS Logging
+- Microphone Recording
+- View Contacts
+- SMS Logs
+- Send SMS
+- Call Logs
+- View Installed Apps
+- View Stub Permissions
+- Live Clipboard Logging
+- Live Notification Logging
+- View WiFi Networks (logs previously seen)
+- File Explorer & Downloader
+- Command Queuing
+- Built In APK Builder
 ---
 O script é projetado para configurar e instalar o aplicativo "L3MON" em um sistema Linux usando a linguagem de programação Python/Bash.
 
