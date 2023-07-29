@@ -3,7 +3,7 @@
 import os
 import subprocess
 
-# Verifica se o usuário é root (ID 0) ou não
+# Verifica se o usuário é root ou não (ou seja, se está sendo executado com privilégios de administrador).
 if os.getuid() == 0:
     # O usuário é root, definimos algumas variáveis para os comandos
     INSTALL_CMD = "sudo apt install"
@@ -19,10 +19,11 @@ else:
 if not os.path.exists("L3MON"):
     subprocess.run(["git", "clone", "https://github.com/efxtv/L3MON.git"])
 
-# Move o script para dentro do diretório do repositório
+# Move o script para dentro do diretório do repositório L3MON (exceto o próprio diretório do script)
 script_dir = os.path.dirname(os.path.abspath(__file__))
-os.chdir("L3MON")
-os.rename(script_dir, os.path.join("L3MON", os.path.basename(script_dir)))
+l3mon_dir = os.path.join("L3MON", os.path.basename(script_dir))
+if script_dir != l3mon_dir:
+    os.rename(script_dir, l3mon_dir)
 
 # Acessa o diretório do repositório clonado
 os.chdir("L3MON")
